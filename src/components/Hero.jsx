@@ -30,7 +30,7 @@ export default function Hero() {
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400">Flutter Mobile</span> Apps & <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">Java Microservices</span>.
+              Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400">Enterprise Flutter Apps</span> & <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">Java Microservices</span>.
             </h1>
 
             {/* Subtitle / Bio */}
@@ -43,24 +43,25 @@ export default function Hero() {
             </p>
 
             {/* CTAs & Socials */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-300 hover:from-cyan-300 hover:to-teal-200 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 text-sm font-mono group"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-300 hover:from-cyan-300 hover:to-teal-200 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 text-sm font-mono group"
               >
                 <span>View Shipped Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 
               <a
-                href="#architecture"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-medium text-slate-300 bg-slate-900/80 hover:bg-slate-800/80 border border-slate-700 hover:border-cyan-500/50 transition-all text-sm font-mono"
+                href={socials.resume}
+                download="Bomik_Ansari_CV.docx"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-medium text-cyan-300 bg-cyan-950/40 hover:bg-cyan-900/60 border border-cyan-500/30 hover:border-cyan-400 transition-all text-sm font-mono shadow-sm"
               >
-                <Layers className="w-4 h-4 text-cyan-400" />
-                <span>See Architecture</span>
+                <Download className="w-4 h-4 text-cyan-400" />
+                <span>Download CV</span>
               </a>
 
-              <div className="flex items-center gap-2 pl-2">
+              <div className="flex items-center gap-2 pl-1">
                 <a
                   href={socials.github}
                   target="_blank"
@@ -137,17 +138,18 @@ export default function Hero() {
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between text-slate-400">
                       <span className="text-cyan-400 flex items-center gap-1">
-                        <Smartphone className="w-3.5 h-3.5" /> [Flutter Client]
+                        <Smartphone className="w-3.5 h-3.5" /> [Flutter / BLoC Client]
                       </span>
-                      <span className="text-[11px] text-slate-500">lib/bloc/auth_bloc.dart</span>
+                      <span className="text-[11px] text-slate-500">lib/bloc/transaction_bloc.dart</span>
                     </div>
                     <div className="bg-slate-950/70 p-3 rounded-lg border border-slate-800/80 text-slate-300">
-                      <p className="text-slate-500">// Dispatch reactive state transition</p>
-                      <p><span className="text-purple-400">final</span> response = <span className="text-purple-400">await</span> apiClient.post(</p>
-                      <p className="pl-4 text-emerald-400">'/api/v1/auth/session',</p>
-                      <p className="pl-4">headers: {'{'}<span className="text-yellow-300">'X-Device'</span>: <span className="text-cyan-300">'Mobile-Flutter'</span>{'}'},</p>
+                      <p className="text-slate-500">// Enterprise banking encryption & telemetry</p>
+                      <p><span className="text-purple-400">final</span> payload = <span className="text-cyan-300">AESCrypto</span>.encrypt(data);</p>
+                      <p><span className="text-purple-400">final</span> res = <span className="text-purple-400">await</span> apiClient.post(</p>
+                      <p className="pl-4 text-emerald-400">'/api/v1/corporate/trade-emerge',</p>
+                      <p className="pl-4">body: payload,</p>
                       <p>);</p>
-                      <p className="text-slate-400">emit(AuthState.authenticated(user));</p>
+                      <p className="text-slate-400">emit(TransactionSuccess(res.payload));</p>
                     </div>
                   </div>
 
@@ -155,7 +157,7 @@ export default function Hero() {
                   <div className="flex items-center justify-center gap-3 py-1 text-slate-500">
                     <div className="h-px bg-slate-800 flex-1"></div>
                     <span className="text-[10px] uppercase tracking-wider text-cyan-400 font-bold bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">
-                      ⚡ HTTP/2 & WebSockets • Spring Cloud Gateway
+                      ⚡ HTTP/2 • Spring Cloud & Oracle DB
                     </span>
                     <div className="h-px bg-slate-800 flex-1"></div>
                   </div>
@@ -164,15 +166,15 @@ export default function Hero() {
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between text-slate-400">
                       <span className="text-indigo-400 flex items-center gap-1">
-                        <Server className="w-3.5 h-3.5" /> [Java Microservice]
+                        <Server className="w-3.5 h-3.5" /> [Java Spring Boot Service]
                       </span>
-                      <span className="text-[11px] text-slate-500">AuthController.java</span>
+                      <span className="text-[11px] text-slate-500">TradeController.java</span>
                     </div>
                     <div className="bg-slate-950/70 p-3 rounded-lg border border-slate-800/80 text-slate-300">
-                      <p className="text-yellow-400">@PostMapping<span className="text-slate-300">("/session")</span></p>
-                      <p><span className="text-purple-400">public</span> ResponseEntity&lt;SessionDTO&gt; <span className="text-cyan-400">verifySession</span>() &#123;</p>
-                      <p className="pl-4 text-slate-400">// Reactive Redis verification & JWT mint</p>
-                      <p className="pl-4"><span className="text-purple-400">return</span> ResponseEntity.ok(tokenService.mint());</p>
+                      <p className="text-yellow-400">@PostMapping<span className="text-slate-300">("/trade-emerge")</span></p>
+                      <p><span className="text-purple-400">public</span> ResponseEntity&lt;TradeResponse&gt; <span className="text-cyan-400">processRequisition</span>() &#123;</p>
+                      <p className="pl-4 text-slate-400">// Oracle DB transaction commit & audit trail</p>
+                      <p className="pl-4"><span className="text-purple-400">return</span> ResponseEntity.ok(tradeService.execute());</p>
                       <p>&#125;</p>
                     </div>
                   </div>
@@ -181,9 +183,9 @@ export default function Hero() {
                   <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
                     <span className="flex items-center gap-1.5">
                       <Database className="w-3 h-3 text-emerald-400" />
-                      PostgreSQL + Redis Cache: <strong className="text-emerald-400">Healthy</strong>
+                      Oracle DB + Redis Cache: <strong className="text-emerald-400">Healthy</strong>
                     </span>
-                    <span className="text-slate-500">Latency: 28ms</span>
+                    <span className="text-slate-500">Latency: 18ms</span>
                   </div>
 
                 </div>

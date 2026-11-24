@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Mail, Copy, Check, Send, MessageSquare, Terminal } from 'lucide-react';
+import { Mail, Copy, Check, Send, MessageSquare, Phone, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 
 export default function ContactSection() {
   const { socials, personal } = portfolioData;
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(socials.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2500);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(socials.phone);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2500);
   };
 
   const handleSubmit = (e) => {
@@ -39,7 +46,7 @@ export default function ContactSection() {
             Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400">Exceptional</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
-            Whether you need a high-performance Flutter mobile application, resilient Java microservices, or full-stack architectural advice, I'd love to connect.
+            Open to senior engineering roles, mobile architecture, and high-scale full stack opportunities.
           </p>
         </div>
 
@@ -52,7 +59,7 @@ export default function ContactSection() {
                 Contact Information
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                I am actively seeking impactful opportunities in Mobile & Microservice engineering. Feel free to reach out directly via email or social networks.
+                Feel free to connect directly via email, phone, or LinkedIn. I look forward to discussing impactful projects and architectural challenges.
               </p>
 
               {/* Email One-Click Copy Box */}
@@ -63,9 +70,9 @@ export default function ContactSection() {
                   </div>
                   <div className="truncate">
                     <span className="text-[10px] font-mono text-slate-500 block uppercase tracking-wider">Email Address</span>
-                    <span className="text-xs sm:text-sm font-mono text-slate-200 select-all font-medium truncate">
+                    <a href={`mailto:${socials.email}`} className="text-xs sm:text-sm font-mono text-slate-200 hover:text-cyan-400 font-medium truncate block">
                       {socials.email}
-                    </span>
+                    </a>
                   </div>
                 </div>
 
@@ -75,19 +82,38 @@ export default function ContactSection() {
                   className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-cyan-400 transition-colors shrink-0"
                   title="Copy email to clipboard"
                 >
-                  {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
 
-              {/* Status Indicator */}
-              <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-800/80 space-y-2">
-                <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span>CURRENT AVAILABILITY: ACTIVE</span>
+              {/* Phone One-Click Copy Box */}
+              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 overflow-hidden">
+                  <div className="p-2 rounded-lg bg-emerald-950/80 border border-emerald-500/30 text-emerald-400">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div className="truncate">
+                    <span className="text-[10px] font-mono text-slate-500 block uppercase tracking-wider">Direct Phone / WhatsApp</span>
+                    <a href={`tel:${socials.phone}`} className="text-xs sm:text-sm font-mono text-slate-200 hover:text-emerald-400 font-medium truncate block">
+                      {socials.phone}
+                    </a>
+                  </div>
                 </div>
-                <p className="text-xs text-slate-400">
-                  Response turnaround: typically within 24 hours. Open to contract, full-time, and architectural consulting.
-                </p>
+
+                <button
+                  type="button"
+                  onClick={handleCopyPhone}
+                  className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-emerald-400 transition-colors shrink-0"
+                  title="Copy phone to clipboard"
+                >
+                  {copiedPhone ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                </button>
+              </div>
+
+              {/* Location Badge */}
+              <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-800/80 flex items-center gap-3 text-xs font-mono text-slate-300">
+                <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
+                <span>Gowlidoddy, Hyderabad, 500032 &bull; Open to Remote</span>
               </div>
 
               {/* Social Link Buttons */}
@@ -147,7 +173,7 @@ export default function ContactSection() {
                     <input
                       type="email"
                       required
-                      placeholder="e.g. jane@company.com"
+                      placeholder="e.g. recruiter@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-cyan-400 transition-colors font-mono"

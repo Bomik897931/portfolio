@@ -1,136 +1,162 @@
 export const portfolioData = {
   personal: {
-    name: "Alex Morgan", // Replace with your name
-    role: "Full-Stack Mobile & Microservices Engineer",
-    tagline: "Bridging seamless Flutter mobile experiences with resilient Java microservices architecture.",
-    location: "Available for Remote & Global Opportunities",
-    status: "Open to new challenges",
-    yearsOfExp: "2+ Years",
-    bio: "Passionate software engineer specializing in mobile-first applications and high-throughput backend systems. With 2+ years of experience engineering Java Spring Boot microservices and architecting cross-platform Flutter applications, I design end-to-end digital experiences from pixel-perfect client UI to distributed cloud infrastructures.",
-    avatarText: "AM",
+    name: "Bomik Ansari",
+    role: "Senior Software Engineer | Mobile Full Stack (Flutter & Java)",
+    tagline: "5+ years engineering high-performance cross-platform Flutter & Android apps, backed by Java Spring Boot services.",
+    location: "Hyderabad, India (Open to Remote & Global)",
+    status: "Available for High-Impact Roles",
+    yearsOfExp: "5+ Years",
+    phone: "+91 8979317348",
+    bio: "Senior Software Engineer and Mobile Full Stack Developer with 5+ years of experience building and shipping cross-platform applications end-to-end using Flutter, Dart, and native Android (Java), paired with backend development in Java, Spring Boot, and .NET. Proven track record delivering mission-critical applications for enterprise clients including ICICI Bank and GAIL India (Maharatna PSU), owning the full lifecycle from pixel-perfect UI and reactive architecture to secure APIs and releases.",
+    avatarText: "BA",
   },
   socials: {
     github: "https://github.com/Bomik897931",
-    linkedin: "https://linkedin.com",
-    email: "developer@example.com",
-    resume: "#", // Add link or drop resume.pdf into public folder
+    linkedin: "https://www.linkedin.com/in/bomik-ansari-555980192",
+    email: "ansaribomik@gmail.com",
+    phone: "+91 8979317348",
+    resume: "./Bomik_Ansari_CV_v2.docx", // Downloadable CV
   },
   stats: [
-    { label: "Years Experience", value: "2+" },
-    { label: "Production Apps", value: "8+" },
-    { label: "Microservices Deployed", value: "15+" },
-    { label: "Code Quality / Test Coverage", value: "95%" }
+    { label: "Years Experience", value: "5+ Yrs" },
+    { label: "Production Apps Shipped", value: "10+" },
+    { label: "Enterprise Clients", value: "ICICI & GAIL" },
+    { label: "Post-Launch Defect Rate", value: "0 Critical" }
   ],
   skills: {
     mobile: {
       category: "Mobile Architecture & Client",
-      description: "Crafting fluid 60/120fps cross-platform mobile apps with clean, decoupled architecture.",
+      description: "Engineering 60/120fps reactive mobile applications with Clean Architecture and strict state isolation.",
       items: [
         { name: "Flutter", level: "Expert", highlight: true },
         { name: "Dart", level: "Expert", highlight: true },
-        { name: "Bloc / Riverpod", level: "Advanced", highlight: true },
-        { name: "Clean Architecture", level: "Advanced", highlight: true },
-        { name: "Android / Kotlin", level: "Intermediate" },
-        { name: "iOS / Swift Interop", level: "Intermediate" },
-        { name: "Firebase Suite", level: "Advanced" },
-        { name: "Offline Sync & SQLite/Hive", level: "Advanced" },
+        { name: "BLoC & GetX", level: "Expert", highlight: true },
+        { name: "Provider & State Management", level: "Advanced" },
+        { name: "Clean Architecture / MVVM", level: "Advanced", highlight: true },
+        { name: "Native Android (Java)", level: "Advanced", highlight: true },
+        { name: "FlutterFlow Enterprise", level: "Advanced" },
+        { name: "Firebase Suite & Push Notifications", level: "Advanced" },
+        { name: "Google Maps SDK & Geolocation", level: "Advanced" },
+        { name: "Sqflite & Offline Persistence", level: "Advanced" },
       ]
     },
     backend: {
-      category: "Java Microservices & APIs",
-      description: "Designing fault-tolerant, scalable REST & asynchronous distributed microservices.",
+      category: "Java, Spring Boot & APIs",
+      description: "Developing robust backend APIs, secure microservices, and enterprise data integrations.",
       items: [
-        { name: "Java (17 / 21)", level: "Advanced", highlight: true },
-        { name: "Spring Boot 3", level: "Advanced", highlight: true },
-        { name: "Microservices Architecture", level: "Advanced", highlight: true },
-        { name: "Spring Cloud / Eureka / Gateway", level: "Intermediate", highlight: true },
-        { name: "RESTful & GraphQL APIs", level: "Advanced" },
-        { name: "Spring Security & OAuth2/JWT", level: "Advanced" },
-        { name: "JPA / Hibernate", level: "Advanced" },
-        { name: "WebSockets & Event-Driven", level: "Intermediate" }
+        { name: "Java", level: "Advanced", highlight: true },
+        { name: "Spring Boot", level: "Advanced", highlight: true },
+        { name: "REST API Design & Integration", level: "Expert", highlight: true },
+        { name: "Oracle DB", level: "Advanced", highlight: true },
+        { name: "MySQL & Database Optimization", level: "Advanced" },
+        { name: "Node.js & JavaScript", level: "Intermediate" },
+        { name: ".NET Framework", level: "Intermediate" },
+        { name: "Angular Web Marketplace", level: "Intermediate" },
+        { name: "Enterprise Encryption & AES", level: "Advanced", highlight: true },
       ]
     },
-    cloudAndDevOps: {
-      category: "Databases, Cloud & DevOps",
-      description: "Deploying containerized services and building resilient automated pipelines.",
+    toolsAndPractices: {
+      category: "DevOps, Tools & Certifications",
+      description: "Agile methodologies, CI/CD automation, and modern engineering practices.",
       items: [
-        { name: "PostgreSQL & MySQL", level: "Advanced" },
-        { name: "Redis Caching", level: "Intermediate" },
-        { name: "Docker & Containerization", level: "Intermediate", highlight: true },
-        { name: "GitHub Actions CI/CD", level: "Intermediate", highlight: true },
+        { name: "Git & GitHub Actions CI/CD", level: "Advanced", highlight: true },
+        { name: "BASH Scripting & Linux", level: "Advanced" },
+        { name: "Agile / Scrum Delivery", level: "Expert" },
+        { name: "OOP & Design Patterns", level: "Expert", highlight: true },
         { name: "Postman & API Testing", level: "Advanced" },
-        { name: "AWS (S3, EC2, RDS)", level: "Familiar" },
-        { name: "Kafka / RabbitMQ", level: "Familiar" },
-        { name: "Linux / Bash", level: "Intermediate" }
+        { name: "Claude Certified Suite", level: "Certified", highlight: true },
+        { name: "FlutterFlow Enterprise Expert", level: "Certified", highlight: true },
       ]
     }
   },
   projects: [
     {
-      id: "pulsemart",
-      title: "PulseMart: Distributed Commerce Ecosystem",
-      subtitle: "End-to-End Flutter Mobile Storefront & Java Microservices Backend",
-      category: "Full Stack (Flutter + Java)",
+      id: "icici-dashboard",
+      title: "Dashboard 360 & Trade Emerge",
+      subtitle: "Enterprise Banking Telemetry & Trade Requisition Portal",
+      category: "Enterprise Fintech (ICICI Bank Ltd)",
       featured: true,
-      description: "A production-grade e-commerce ecosystem featuring a blazing-fast Flutter app connected to a decomposed Java Spring Boot microservices backend (Auth, Catalog, Cart, Order, Notification services) with JWT security and Redis caching.",
-      tags: ["Flutter", "Dart", "Java 21", "Spring Boot", "Docker", "PostgreSQL", "Redis"],
-      metrics: ["Sub-80ms API response", "60 FPS smooth animations", "Decoupled 5-service cluster"],
-      github: "https://github.com",
-      demo: "#",
-      type: "Mobile + Backend"
-    },
-    {
-      id: "fintrack",
-      title: "FinTrack Pro: Enterprise Expense & Wealth Monitor",
-      subtitle: "Cross-Platform Financial Tracker with Real-Time Telemetry",
-      category: "Mobile Application",
-      featured: true,
-      description: "A high-performance personal finance and asset tracking application built using Flutter & BLoC state management. Syncs securely with enterprise banking webhook APIs through an encrypted Java Spring Boot gateway.",
-      tags: ["Flutter", "BLoC Pattern", "Java APIs", "Clean Architecture", "Biometric Auth", "Hive DB"],
-      metrics: ["100% offline-first capability", "Zero state leaks", "Bank-grade AES encryption"],
-      github: "https://github.com",
-      demo: "#",
-      type: "Mobile Application"
-    },
-    {
-      id: "telecare-live",
-      title: "TeleCare Health & Real-Time Consultation",
-      subtitle: "Interactive Telemedicine Suite with Live WebSockets & Video",
-      category: "Full Stack (Flutter + Java)",
-      featured: true,
-      description: "Telehealth app connecting doctors and patients for digital appointments. Features real-time appointment scheduling, encrypted chat over Spring Boot WebSockets, and secure medical document storage on AWS S3.",
-      tags: ["Flutter", "Spring Boot", "WebSockets", "AWS S3", "PostgreSQL", "Firebase Messaging"],
-      metrics: ["Real-time message latency < 50ms", "HIPAA-conscious data flow", "Push notification suite"],
-      github: "https://github.com",
+      description: "Engineered corporate transaction reporting and trade requisition systems for ICICI Bank using Flutter, Oracle-backed Java services, JavaScript, and BASH scripting. Implemented strict banking-grade encryption protocols and secure handling of sensitive financial transactions.",
+      tags: ["Flutter", "Dart", "Spring Boot", "Java", "Oracle DB", "BASH", "AES Encryption"],
+      metrics: ["Real-time corporate telemetry", "100% compliance with banking security", "High-throughput data parsing"],
+      github: "https://github.com/Bomik897931",
       demo: "#",
       type: "Full Stack"
     },
     {
-      id: "gateway-auth",
-      title: "Sentinel: Microservices Cloud Gateway & Auth Engine",
-      subtitle: "High-Throughput Centralized Authentication and Route Protection",
-      category: "Backend & Cloud",
-      featured: false,
-      description: "Lightweight API Gateway built with Spring Cloud Gateway and Spring Security. Handles rate-limiting with Redis Token Bucket algorithm, central JWT validation, and dynamic routing to downstream Flutter client endpoints.",
-      tags: ["Java", "Spring Cloud", "Spring Security", "Redis", "Docker", "REST API"],
-      metrics: ["10k+ concurrent req/s capability", "Distributed rate limiting", "Zero-trust verification"],
-      github: "https://github.com",
+      id: "gail-connect",
+      title: "GAIL Connect & Suvidha Travel Suite",
+      subtitle: "Employee Engagement Platform & Enterprise Bus Booking Engine",
+      category: "Enterprise (GAIL India - PSU)",
+      featured: true,
+      description: "Built and maintained GAIL Connect (company-wide employee directory, call/SMS/search, step counter, and chat module) and the SUVIDHA bus seat booking app from architecture through release for GAIL's pan-India workforce with zero critical post-launch defects.",
+      tags: ["Flutter", "BLoC Pattern", "Dart", "Java APIs", "Firebase", "Sqflite", "Push Notifications"],
+      metrics: ["10,000+ enterprise users", "Zero critical defects reported", "Seamless end-to-end booking flow"],
+      github: "https://github.com/Bomik897931",
       demo: "#",
-      type: "Backend Microservices"
+      type: "Mobile Application"
+    },
+    {
+      id: "prms-gail",
+      title: "PRMS: Digital Prescription & Health Tracker",
+      subtitle: "Prescription Management System for Retired Employees",
+      category: "Healthcare Mobile (GAIL India)",
+      featured: true,
+      description: "Designed and shipped PRMS for retired enterprise employees. Features automated medication refill reminders, dosage telemetry tracking, medication history, and streamlined digital prescription approval requests.",
+      tags: ["Flutter", "GetX", "REST APIs", "Firebase Cloud Messaging", "Sqflite", "MVVM"],
+      metrics: ["Automated refill reminders", "Offline medication history", "Sub-second search indexing"],
+      github: "https://github.com/Bomik897931",
+      demo: "#",
+      type: "Mobile Application"
+    },
+    {
+      id: "meatinda-myspm",
+      title: "Meatinda & MY SPM Operations Suite",
+      subtitle: "On-Demand Delivery Platform & Industrial Manufacturing App",
+      category: "On-Demand & Industry",
+      featured: false,
+      description: "Built Meatinda, a doorstep on-demand delivery app featuring real-time Google Maps store locators and live order-tracking flows. Also engineered MY SPM, an operations app for a medical device and disposable apparel manufacturing facility.",
+      tags: ["Flutter", "Google Maps SDK", "Provider", "Android (Java)", "Firebase", "Sqflite"],
+      metrics: ["Real-time GPS tracking", "Delivered ahead of schedule", "60 FPS fluid ordering UX"],
+      github: "https://github.com/Bomik897931",
+      demo: "#",
+      type: "Mobile Application"
     }
   ],
   experience: [
     {
-      period: "2024 — Present",
-      role: "Microservices & Mobile Software Engineer",
-      company: "Enterprise Cloud Solutions",
-      description: "Architecting backend microservices in Java Spring Boot while driving Flutter cross-platform mobile app initiatives. Optimizing API response times, setting up automated CI/CD pipelines, and establishing Clean Architecture standards across teams."
+      period: "Dec 2024 — Present",
+      role: "Senior Software Engineer",
+      company: "Eleserv Softech Pvt Ltd",
+      client: "Client: ICICI Bank Ltd",
+      projects: "Dashboard 360, Trade Emerge, ICMS, Web CMS",
+      description: "Architecting and developing corporate transaction dashboards and trade requisition portals using Flutter, Oracle-backed Java services, and JavaScript. Working directly with ICICI Bank on production financial systems meeting rigorous security and compliance standards."
     },
     {
-      period: "2022 — 2024",
-      role: "Flutter Mobile Developer",
-      company: "Digital Product Studio",
-      description: "Developed and shipped high-performance Android and iOS applications with Flutter. Implemented complex reactive state management, integrated RESTful APIs, and maintained offline persistence systems."
+      period: "Apr 2022 — Dec 2024",
+      role: "Software Engineer",
+      company: "Coforge Ltd.",
+      client: "Client: GAIL India (Maharatna PSU)",
+      projects: "GAIL Connect, Suvidha, PRMS, CGD Permit, GTONS, HSE Bytes, Prastaav",
+      description: "Engineered and maintained a suite of 6+ enterprise mobile and web applications for GAIL India, including GAIL Connect (employee engagement with call/SMS/step counter/chat), PRMS (prescription management), and SUVIDHA (seat booking). Delivered all releases on schedule with zero critical post-launch defects."
+    },
+    {
+      period: "Oct 2020 — Apr 2022",
+      role: "Flutter Developer",
+      company: "Codiant Biztech",
+      client: "Projects: MY SPM, Meatinda, WinerBox, AstroJuno",
+      description: "Delivered on-demand mobile applications and manufacturing operational tools using Flutter and native Android. Implemented live Google Maps tracking, responsive ordering flows, offline caching with Sqflite, and push notifications."
     }
+  ],
+  education: [
+    {
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Institute of Management Studies, Ghaziabad",
+      period: "Aug 2017 — Jul 2020"
+    }
+  ],
+  certifications: [
+    "FlutterFlow Enterprise Expert Course",
+    "Claude 101, Claude Code 101, Claude Cowork, Claude Platform 101"
   ]
 };
